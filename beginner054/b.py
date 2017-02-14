@@ -18,8 +18,8 @@ def match(N,M,A,B):
     for j in range(0, N - len(B)):
         for i in range(0, N - len(B)):
             if getpattern(A, size, i, j) == bpattern:
-                return True
+                return 'Yes'
 
-    return False
+    return 'No'
 
 print match(N,M,A,B)
