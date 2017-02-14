@@ -12,11 +12,11 @@ def getpattern(image, s = 0, x = 0, y = 0):
     return ''.join([image[i][x:x+s] for i in range(y, y + s)])
 
 def match(N,M,A,B):
-    size = len(B)
+    size = M
 
     bpattern = getpattern(B)
-    for j in range(0, N - len(B)):
-        for i in range(0, N - len(B)):
+    for j in range(0, N - M + 1):
+        for i in range(0, N - M + 1):
             if getpattern(A, size, i, j) == bpattern:
                 return 'Yes'
 
